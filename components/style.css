@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
+
+body {
+  margin: 0;
+  padding: 0;
+  flex: 1;
+  background: linear-gradient(
+    to right,
+    #ad02ad 0%,
+    #ad02ad 40%,
+    #fdfdfd 40%,
+    #fdfdfd 100%
+  );
+  height: 100vh;
+}
+.card {
+  margin: 1rem;
+  background: linear-gradient(
+    to right,
+    #ad02ad 0%,
+    #ad02ad 35%,
+    #fdfdfd 35%,
+    #fdfdfd 100%
+  );
+  border: none;
+  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+  border-radius: 10px;
+}
+.card__image img {
+  height: 13rem;
+  width: 13rem;
+  border-radius: 10px;
+  margin-left: 10px;
+  margin-top: 10px;
+  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+  -moz-box-shadow: 5px 5px 13px rgba(0, 0, 0, 0.89);
+  -webkit-box-shadow: 5px 5px 13px rgba(0, 0, 0, 0.89);
+}
+.card__text h4 {
+    font-size: 3rem;
+    margin-top: 1rem;
+    font-family: "Righteous", cursive !important;
+  }
+  .card__text h5
+ {
+    margin-top: 1rem;
+    color: rgb(87, 84, 84);
+    font-family: 'Comic Neue', cursive;
+    font-size: 1.6rem;
+  }
+  .card__text p{
+    font-family: 'Comic Neue', cursive;
+    font-size: 1.3rem;
+    color: grey;
+  }
+  .card__text{
+      margin-left: 10px;
+  }
+
+/******************* Social Icons ***********************/
+.social_icons{
+    margin-top: 3rem;
+}
+  .social_icons a {
+    text-decoration: none !important;
+  }
+  .facebook {
+    color: white !important;
+    background-color: rgb(33, 66, 202);
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    border-radius: 50%;
+    padding: 13px;
+    width: 2.5rem;
+    height: 2.5rem;
+    transition: 0.5s ease-in-out;
+    box-shadow: 5px 5px 13px rgba(0, 0, 0, 0.89);
+  }
+  .facebook:hover {
+    transform: translate(0, -15px);
+  }
+  
+  .github {
+    color: white !important;
+    background-color: rgb(24, 26, 27);
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    border-radius: 50%;
+    padding: 13px;
+    width: 2.5rem;
+    height: 2.5rem;
+    transition: 0.5s ease-in-out;
+    box-shadow: 5px 5px 13px rgba(0, 0, 0, 0.89);
+  }
+  .github:hover {
+    transform: translate(0, -15px);
+  }
+  
+  .linkedin {
+    color: white !important;
+    background-color: rgb(50, 33, 202);
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    border-radius: 50%;
+    padding: 13px;
+    width: 2.5rem;
+    height: 2.5rem;
+    transition: 0.5s ease-in-out;
+    box-shadow: 5px 5px 13px rgba(0, 0, 0, 0.89);
+  }
+  .linkedin:hover {
+    transform: translate(0, -15px);
+  }
+
+/******************* Card Details ***********************/
+.card__details{
+    margin-top: 1rem;
+}
+.card__details__text{
+    padding-bottom: 1rem;
+    color: rgb(238, 235, 235);
+    
+}
+
+.fa, .fas{
+    color: white !important;
+    background-color: transparent;
+    font-size: 1rem;
+    border-radius: 50%;
+    padding: 11px;
+    width: 2.5rem;
+    height: 2.5rem;
+    transition: 0.5s ease-in-out;
+    box-shadow: 5px 5px 13px rgba(0, 0, 0, 0.89);
+}
+.card__details__text h5{
+    font-size: 1.5rem;
+    font-family: 'Raleway', sans-serif;
+    font-weight: bolder;
+}
+.card__inner{
+margin: 1rem;
+  background: transparent;
+  border: none;
+  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+  border-radius: 10px;
+  padding: 1rem;
+  height: 11rem;
+}
+.stat-items h5,p{
+    color: white;
+}
+.stat-items h5{
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 4px 0;
+}
+.stat-items p{
+    font-weight: bold;
+}
+.stat-items hr{
+    width: 4rem;
+    box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22)
+}
+.stat-items span{
+    color: #ad02ad;
+}
+.white__page .fa{
+    color: #ad02ad !important;
+}
+.white__page h5{
+    color: #ad02ad !important;  
+}
+.white__page p{
+    color: #ad02ad !important;  
+}
+
+/******************* Card Details ***********************/
+.contact__card{
+    box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+    margin: 1rem;
+    border-radius: 10px;
+}
+.contact__card__details{
+    padding: 1rem;
+}
+.contact__card__details1{
+    padding: 1rem;
+    color: #ad02ad;
+    font-weight: bold;
+}
+.contact__card__details1 h4{
+    font-family: 'Raleway' sans-serif;
+    color: #ad02ad;
+    padding-top: 1rem;
+}
+.contact__card__details1 .fa{
+    color: #ad02ad !important;
+
+}
+.contact__card__details h4{
+    font-family: 'Raleway' sans-serif;
+    color: white;
+    padding-top: 1rem;
+}
