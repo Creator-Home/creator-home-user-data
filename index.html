@@ -10,6 +10,8 @@
 
     <!-------------------- Styles -------------->
     <link rel="stylesheet" href="./style.css">
+
+    <script src="./assets/js/main.js"></script>
     <title>Project Two</title>
 </head>
 
@@ -23,10 +25,9 @@
         </button>
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="search" placeholder="Search User" aria-label="Search">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-            </form>
+            
+                <input type="text" id="myFilter" class="form-control" onkeyup="myFunction()" placeholder="Search for names..">
+                
         </div>
     </nav>
 
@@ -54,8 +55,8 @@
                     </div>
 
                     <!-------------------- Right Column Cards -------------->
-                    <div class="row cards">
-                         <!-------------------- Right Column Card One -------------->
+                    <div class="row cards" id="myItems">
+                        <!-------------------- Right Column Card One -------------->
                         <div class="col-md-3">
                             <div class="card text-center shadow p-3 mb-5 bg-white rounded">
                                 <div class="card__image">
@@ -81,7 +82,7 @@
                             </div>
                         </div>
 
-                         <!-------------------- Right Column Card Two -------------->
+                        <!-------------------- Right Column Card Two -------------->
                         <div class="col-md-3">
                             <div class="card text-center shadow p-3 mb-5 bg-white rounded">
                                 <div class="card__image">
@@ -93,7 +94,7 @@
                                     <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
                                 </div>
                                 <div class="card__button">
-                                    <a href="">View Profile</a>
+                                    <a href="./components/profile2.html">View Profile</a>
                                 </div>
                                 <div class="card__ruler"></div>
                                 <div class="social_icons text-center">
@@ -119,7 +120,7 @@
                                     <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
                                 </div>
                                 <div class="card__button">
-                                    <a href="">View Profile</a>
+                                    <a href="./components/profile3.html">View Profile</a>
                                 </div>
                                 <div class="card__ruler"></div>
                                 <div class="social_icons text-center">
@@ -140,12 +141,12 @@
                                     <img src="./images/5.jpg" alt="person" class="img-fluid">
                                 </div>
                                 <div class="card__text">
-                                    <h4>Milla Jovovic</h4>
+                                    <h4>Milla Jovovich</h4>
                                     <h5>Javascript Developer</h5>
                                     <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
                                 </div>
                                 <div class="card__button">
-                                    <a href="">View Profile</a>
+                                    <a href="./components/profile4.html">View Profile</a>
                                 </div>
                                 <div class="card__ruler"></div>
                                 <div class="social_icons text-center">
@@ -163,31 +164,31 @@
                     <!-------------------- Right Column Cards -------------->
                     <div class="row cards">
                         <!-------------------- Right Column Card Five -------------->
-                       <div class="col-md-3">
-                           <div class="card text-center shadow p-3 mb-5 bg-white rounded">
-                               <div class="card__image">
-                                   <img src="./images/2.jpg" alt="person" class="img-fluid">
-                               </div>
-                               <div class="card__text">
-                                   <h4>Ariana Grande</h4>
-                                   <h5>Cyber Security</h5>
-                                   <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
-                               </div>
-                               <div class="card__button">
-                                <a href="">View Profile</a>
-                               </div>
-                               <div class="card__ruler"></div>
-                               <div class="social_icons text-center">
-                                   <a href="https://web.facebook.com/solomon.kylebryan"> <i
-                                           class="fab fa-facebook-f facebook"></i>
-                                   </a>
-                                   <a href="https://github.com/mcbryan1"> <i class="fab fa-github github"></i> </a>
-                                   <a href="https://www.linkedin.com/in/solomon-tetteh-a7b605190/"> <i
-                                           class="fab fa-linkedin-in linkedin"></i> </a>
-                               </div>
-                           </div>
-                       </div>
-                   </div>
+                        <div class="col-md-3">
+                            <div class="card text-center shadow p-3 mb-5 bg-white rounded">
+                                <div class="card__image">
+                                    <img src="./images/2.jpg" alt="person" class="img-fluid">
+                                </div>
+                                <div class="card__text">
+                                    <h4>Ariana Grande</h4>
+                                    <h5>Cyber Security</h5>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                                </div>
+                                <div class="card__button">
+                                    <a href="./components/profile5.html">View Profile</a>
+                                </div>
+                                <div class="card__ruler"></div>
+                                <div class="social_icons text-center">
+                                    <a href="https://web.facebook.com/solomon.kylebryan"> <i
+                                            class="fab fa-facebook-f facebook"></i>
+                                    </a>
+                                    <a href="https://github.com/mcbryan1"> <i class="fab fa-github github"></i> </a>
+                                    <a href="https://www.linkedin.com/in/solomon-tetteh-a7b605190/"> <i
+                                            class="fab fa-linkedin-in linkedin"></i> </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -203,6 +204,23 @@
     <!--------------------- Bootstrap & JQuery  -------------------->
     <script src="./assets/js/jquery-3.4.1.min.js"></script>
     <script src="./assets/js/bootstrap.min.js"></script>
+    <script>
+        function myFunction() {
+            var input, filter, cards, cardContainer, h4, title, i;
+            input = document.getElementById("myFilter");
+            filter = input.value.toUpperCase();
+            cardContainer = document.getElementById("myItems");
+            cards = cardContainer.getElementsByClassName("card");
+            for (i = 0; i < cards.length; i++) {
+                title = cards[i].querySelector(".card-body h5.card-title");
+                if (title.innerText.toUpperCase().indexOf(filter) > -1) {
+                    cards[i].style.display = "";
+                } else {
+                    cards[i].style.display = "none";
+                }
+            }
+        }
+    </script>
 </body>
 
 </html>
