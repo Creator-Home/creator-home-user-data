@@ -14,6 +14,18 @@ body {
   );
   height: 100vh;
 }
+/************************* Media Queries *********************/
+@media screen and (max-width: 480px) {
+  body{
+    background: linear-gradient(
+      to right,
+      #ad02ad 0%,
+      #ad02ad 50%,
+      #fdfdfd 50%,
+      #fdfdfd 100%
+    );
+  }
+}
 .card {
   margin: 1rem;
   background: linear-gradient(
@@ -26,6 +38,12 @@ body {
   border: none;
   box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
   border-radius: 10px;
+}
+/************************* Media Queries *********************/
+@media   (max-width: 480px) {
+  .card{
+      background: #fdfdfd;
+  }
 }
 .card__image img {
   height: 13rem;
@@ -58,12 +76,55 @@ body {
       margin-left: 10px;
   }
 
+  /************************* Media Queries *********************/
+  @media screen and (max-width: 480px) {
+    .card__text h4{
+        color: #ad02ad;
+        text-align: center;
+        font-size: 2.5rem;
+    }
+  }
+  @media screen and (max-width: 480px) {
+    .card__text{
+        margin-bottom: 0;
+    }
+  }
+  @media screen and (max-width: 480px) {
+    .card__text h5{
+        color: rgb(68, 68, 68);
+        text-align: center;
+        font-size: 1.7rem;
+    }
+  }
+  @media screen and (max-width: 480px) {
+    .card__text p{
+        color: rgb(68, 68, 68) !important;
+        text-align: center;
+        font-size: 1.2rem;
+        margin-top: 1rem;
+        margin-bottom: 0;
+    }
+  }
+
 /******************* Social Icons ***********************/
 .social_icons{
     margin-top: 3rem;
 }
   .social_icons a {
     text-decoration: none !important;
+  }
+
+  /************************* Media Queries *********************/
+  @media screen and (max-width: 350px) {
+     .social_icons{
+        flex: 1;
+    }
+  }
+  @media screen and (max-width: 350px){
+    .icons{
+      flex-direction: row;
+      margin: 0;
+    }
   }
   .facebook {
     color: white !important;
@@ -126,7 +187,7 @@ body {
     
 }
 
-.fa, .fas{
+.fa{
     color: white !important;
     background-color: transparent;
     font-size: 1rem;
@@ -178,6 +239,18 @@ margin: 1rem;
 .white__page p{
     color: #ad02ad !important;  
 }
+.white__page .fab{
+  color: #ad02ad !important;
+  
+    background-color: transparent;
+    font-size: 1rem;
+    border-radius: 50%;
+    padding: 11px;
+    width: 2.5rem;
+    height: 2.5rem;
+    transition: 0.5s ease-in-out;
+    box-shadow: 5px 5px 13px rgba(0, 0, 0, 0.89);
+}
 
 /******************* Card Details ***********************/
 .contact__card{
@@ -206,4 +279,23 @@ margin: 1rem;
     font-family: 'Raleway' sans-serif;
     color: white;
     padding-top: 1rem;
+}
+
+
+/************************* Media Queries *********************/
+@media screen and (max-width: 480px) {
+  .stat-items .fa{
+     color: #ad02ad !important;
+ }
+ .stat-items h5,p{
+  color: #ad02ad !important;
+ }
+ .contact__card__details .fa{
+  color: #ad02ad !important;
+ }
+ .contact__card__details h4{
+  font-family: 'Raleway' sans-serif;
+  color: #ad02ad;
+  padding-top: 1rem;
+ }
 }
